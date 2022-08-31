@@ -24,6 +24,9 @@ var emulator = new V86Starter({
             buffer : linux,
         },
     autostart: true,
+    cmdline: "tsc=reliable mitigations=off random.trust_cpu=on",
+    autostart: true,
+    disable_keyboard: true,
 });
 
 emulator.add_listener("serial0-output-char", function(chr)
